@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <title>Welcome to Quote Rich Text</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <style>
+        body {
+            background: #f5f7fa;
+            min-height: 100vh;
+            margin: 0;
+            display: flex;
+            justify-content: center;
+            align-items: flex-start;
+            padding-top: 0.5em;
+            font-family: system-ui, sans-serif;
+        }
+
+        .onboarding-container {
+            background: #fff;
+            border-radius: 1.2em;
+            box-shadow: 0 4px 24px rgba(0, 0, 0, 0.10);
+            padding: 1.5em 1.5em;
+            max-width: 360px;
+            width: 90vw;
+            text-align: center;
+        }
+
+        .onboarding-container h1 {
+            margin-top: 0em;
+            font-size: 1.4em;
+            font-weight: 600;
+        }
+
+        .brand {
+            color: #1976d2;
+        }
+
+        .privacy-box {
+            background: #f0f4f8;
+            border-radius: 0.7em;
+            padding: 0.3em;
+            text-align: center;
+        }
+
+        .privacy-box h4 {
+            margin-top: 0.2em;
+            margin-bottom: 0.2em;
+        }
+
+        .privacy-box p {
+            margin-top: 0em;
+        }
+
+        button#removeBtn {
+            background: #d32f2f;
+            color: #fff;
+            border: none;
+            border-radius: 0.5em;
+            padding: 0.7em 1.5em;
+            font-size: 1em;
+            cursor: pointer;
+            margin-top: 1em;
+            transition: background 0.2s;
+        }
+
+        button#removeBtn:hover {
+            background: #b71c1c;
+        }
+
+        @media (max-width: 500px) {
+            body {
+                padding-top: 0.2em;
+            }
+
+            .onboarding-container {
+                padding: 1em 0.5em;
+                max-width: 98vw;
+            }
+        }
+
+        .hidden {
+            display: none;
+        }
+
+        .version-number {
+            color: #1976d2;
+            font-weight: bold;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="onboarding-container">
+        <!-- Onboarding Section -->
+        <section id="onboarding-section">
+            <h1>Welcome to Quote Rich Text!</h1>
+        </section>
+
+        <!-- Upboarding Section -->
+        <section id="upboarding-section" class="hidden">
+            <h1>Quote Rich Text updated!</h1>
+            <div id="whats-new"></div>
+        </section>
+
+        <!-- Shared How to Use Instructions -->
+        <div id="how-to-use" style="margin-top:0.5em; margin-bottom:1em;">
+            <strong>How to use:</strong> Select text in a rich text editor, then use the toolbar icon, context
+            menu, or keyboard shortcut to quote it in Gmail® style.
+        </div>
+
+        <div class="privacy-box">
+            <h4>Privacy</h4>
+            <p>
+                This extension does <em>not</em> collect, store, or share any personal data.
+                All processing is performed locally in your browser.
+            </p>
+        </div>
+
+        <button id="removeBtn">Remove Extension</button>
+    </div>
+
+    <script src="onboarding.js"></script>
+</body>
+
+</html>

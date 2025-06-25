@@ -1,0 +1,45 @@
+{
+  "manifest_version": 2,
+  "name": "Quote Rich Text",
+  "version": "1.0",
+  "description": "Wraps selected editable text in a styled blockquote, like Gmail®",
+  "icons": {
+    "32": "images/icon-32.png",
+    "48": "images/icon-48.png",
+    "64": "images/icon-64.png",
+    "96": "images/icon-96.png",
+    "128": "images/icon-128.png"
+  },
+  "permissions": [
+    "activeTab",
+    "contextMenus"
+  ],
+  "background": {
+    "scripts": [
+      "background.js"
+    ]
+  },
+  "browser_action": {
+    "default_icon": {
+      "32": "images/icon-32.png",
+      "48": "images/icon-48.png",
+      "64": "images/icon-64.png",
+      "96": "images/icon-96.png",
+      "128": "images/icon-128.png"
+    },
+    "default_title": "Quote Rich Text"
+  },
+  "commands": {
+    "quote-rich-text": {
+      "suggested_key": {
+        "default": "Ctrl+Alt+Q"
+      },
+      "description": "Quote selected rich text"
+    }
+  },
+  "browser_specific_settings": {
+    "gecko": {
+      "id": "john.navas@gmail.com"
+    }
+  }
+}
